@@ -9,7 +9,7 @@ class ContactsController < ApplicationController
      flash[:success] = "Thank you for contacting us. Responses may take 1-2 days."
      redirect_to new_contact_path
    else
-     flash[:error] = @contact.errors.full_messages.join(", ")
+     flash[:danger] = @contact.errors.full_messages.join(", ")
      redirect_to new_contact_path
    end
  end
