@@ -5,12 +5,18 @@
       
       <div class= "container">
           <p>You have received a message from the site's contact form from:
-            <div class="row"> <%= "#{ @name }" %> 
+            <div class="well"> 
+              <%= "#{ @name }" %> 
             </div> 
-            <div class="row"> <%= "Comments:" "\n" "#{ @email }" %>
-            </div
+            <div class="well"> 
+              <%= "#{ @email }" %>
+            </div>
           </p>
-          <p><%= @body %></p>
+          <p>
+            <div class="well">
+              <%= "Comments:" "#{ @body }" %>
+            </div>
+          </p>
       </div>
   </body>
 </html>
