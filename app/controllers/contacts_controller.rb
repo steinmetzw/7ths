@@ -6,6 +6,10 @@ class ContactsController < ApplicationController
  def create
    @contact = Contact.new(contact_params)
    if @contact.save
+     name = params[:contact][:name]
+     email = params[:contact][:email]
+     body = params[:contact][:comments]
+     ContactMailer.contact_email(name, email, body).deliver
      flash[:success] = "Thank you for contacting us. Responses may take 1-2 days."
      redirect_to new_contact_path
    else
