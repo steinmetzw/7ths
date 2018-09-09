@@ -27,9 +27,6 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'parallax-rails'
-
-gem 'modernizr-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -48,6 +45,10 @@ gem 'font-awesome-sass', '~> 5.3.1'
 
 # Use Hirb for better database table display in console
 gem 'hirb', '0.7.3'
+
+# Use Devise for user authentication
+
+gem 'devise', '~> 4.5.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
